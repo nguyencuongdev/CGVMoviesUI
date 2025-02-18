@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import {
   Menubar,
   MenubarContent,
@@ -17,31 +18,18 @@ import { cn } from '@/lib/utils';
 const navigationCenterList = [
   {
     icon: null,
-    label: 'Phim',
+    label: 'navigation-movies',
     to: null,
     childrens: [
       {
         icon: null,
-        label: 'Phim đang chiếu',
-        to: null,
-        childrens: [
-          {
-            icon: null,
-            label: 'Phim đang chiếu',
-            to: '/movies/now-show',
-            childrens: null,
-          },
-          {
-            icon: null,
-            label: 'Phim sắp chiếu',
-            to: '/movies/comming-soon',
-            childrens: null,
-          },
-        ],
+        label: 'navigation-movies-now-showing',
+        to: '/movies/now-showing',
+        childrens: null,
       },
       {
         icon: null,
-        label: 'Phim sắp chiếu',
+        label: 'navigation-movies-comming-son',
         to: '/movies/comming-soon',
         childrens: null,
       },
@@ -49,24 +37,24 @@ const navigationCenterList = [
   },
   {
     icon: null,
-    label: 'Rap CGV',
+    label: 'navigation-theaters',
     to: null,
     childrens: [
       {
         icon: null,
-        label: 'Tất cả các rap',
+        label: 'navigation-theaters-all',
         to: '/raps',
         childrens: null,
       },
       {
         icon: null,
-        label: 'Rap đặc biệt',
+        label: 'navigation-theaters-special',
         to: '/raps/theaters-special',
         childrens: null,
       },
       {
         icon: null,
-        label: 'Rap 3D',
+        label: 'navigation-theaters-3d',
         to: '/raps/3d',
         childrens: null,
       },
@@ -74,18 +62,18 @@ const navigationCenterList = [
   },
   {
     icon: null,
-    label: 'Thành Viên',
+    label: 'navigation-membership',
     to: null,
     childrens: [
       {
         icon: null,
-        label: 'Tài khoản CGV',
+        label: 'navigation-membership-account',
         to: '/accounts',
         childrens: null,
       },
       {
         icon: null,
-        label: 'Rap đặc biệt',
+        label: 'navigation-membership-benefits',
         to: '/accounts/cgv-membership',
         childrens: null,
       },
@@ -93,36 +81,36 @@ const navigationCenterList = [
   },
   {
     icon: null,
-    label: 'Cultureplex',
+    label: 'navigation-cultureplex',
     to: null,
     childrens: [
       {
         icon: null,
-        label: 'Quầy online',
+        label: 'navigation-cultureplex-store-online',
         to: '/online-store',
         childrens: null,
       },
       {
         icon: null,
-        label: 'Thuê rap và vé nhóm',
+        label: 'navigation-cultureplex-hall-rental',
         to: '/cinemas/sale',
         childrens: null,
       },
       {
         icon: null,
-        label: 'E-CGV',
+        label: 'navigation-cultureplex-e-cgv',
         to: 'cgv-online',
         childrens: null,
       },
       {
         icon: null,
-        label: 'CGV EGiff',
+        label: 'navigation-cultureplex-egiff',
         to: '/cgv-egiff',
         childrens: null,
       },
       {
         icon: null,
-        label: 'CGV Rules',
+        label: 'navigation-cultureplex-rules',
         to: '/cgv-rules',
         childrens: null,
       },
@@ -167,11 +155,11 @@ function NavigationMenuItem(props: NavigationMenuItemProps) {
 
   if (!to && childrens && childrens.length > 0) {
     return (
-      <Menubar className={cn('nav-item nav-menu-item bg-transparent rounded-none border-0')}>
+      <Menubar className={cn('nav-item nav-menu-item bg-transparent rounded-none border-0 shadow-none')}>
         <MenubarMenu>
           <MenubarTrigger className='text-sm uppercase cursor-pointer focus:bg-transparent focus:text-[#222] font-bold text-[#222] data-[state=open]:bg-transparent data-[state=open]:text-[#222]'>
             {icon && <img src={icon} alt='icon item' />}
-            {label}
+            <FormattedMessage id={label} />
           </MenubarTrigger>
           <MenubarContent className='menu-content p-1 rounded-none border-none'>
             <div className='border-2 border-[#666]'>
@@ -199,7 +187,7 @@ function NavigationMenuItem(props: NavigationMenuItemProps) {
         to={to ?? ''}
         className={cn('font-bold text-white hover:text-[#e71a0f] text-sm px-2 py-[1.5] inline-block', className)}>
         {icon && <img src={icon} alt='icon item' />}
-        {label}
+        <FormattedMessage id={label} />
       </Link>
     </div>
   );
@@ -217,7 +205,7 @@ function MenubarSubMenu(props: MenubarSubMenuProps) {
               'text-white hover:text-[#e71a0f] text-sm cursor-pointer font-bold data-[state=open]:bg-transparent focus:text-white focus:bg-transparent data-[state=open]:text-[#e71a0f]',
             )}>
             {icon && <img src={icon} alt='icon item' />}
-            {label}
+            <FormattedMessage id={label} />
           </MenubarSubTrigger>
           <MenubarSubContent className={cn('menu-sub-content rounded-none border-none')}>
             <div className='border-2 border-[#666]'>
@@ -249,7 +237,7 @@ function MenubarSubMenu(props: MenubarSubMenuProps) {
           className,
         )}>
         {icon && <img src={icon} alt='icon item' />}
-        {label}
+        <FormattedMessage id={label} />
       </Link>
     </div>
   );
