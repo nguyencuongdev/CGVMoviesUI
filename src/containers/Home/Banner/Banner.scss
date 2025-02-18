@@ -1,0 +1,11 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.banner {
+    background: url(./imgs/bg_c_bricks.png);
+    height: 448px;
+}
+
+.banner-container {
+    @include width-layout-default;
+    background: transparent;
+}

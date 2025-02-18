@@ -1,0 +1,14 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.categorys {
+    @include width-layout-default;
+    background-image: url(./imgs/bg-header-transparent-home.png);
+    background-repeat: no-repeat;
+    height: 90px;
+}
+
+.categorys-container {
+    @include width-layout-default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}

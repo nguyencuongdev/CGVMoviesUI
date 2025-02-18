@@ -1,9 +1,11 @@
-import { FormattedMessage } from 'react-intl';
+import { Category, Banner } from '@/containers/Home';
+import { cn } from '@/lib/utils';
 
 const HomePage = () => {
   return (
-    <div>
-      <FormattedMessage id='title' />
+    <div className={cn('home-container')}>
+      <Category />
+      <Banner />
     </div>
   );
 };
