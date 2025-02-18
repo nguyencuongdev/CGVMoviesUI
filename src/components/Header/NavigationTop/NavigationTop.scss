@@ -1,0 +1,10 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.header-top {
+    @include width-layout-default;
+    height: var(--height-header-top);
+}
+
+.nav-top-link {
+    cursor: pointer;
+}

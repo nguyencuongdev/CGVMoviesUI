@@ -1,10 +1,12 @@
-import './App.css';
+import { GlobalStyle } from './components/GlobalStyle';
 import AppRouter from './routers/AppRouter';
 
 function App() {
   return (
     <>
-      <AppRouter />
+      <GlobalStyle>
+        <AppRouter />
+      </GlobalStyle>
     </>
   );
 }

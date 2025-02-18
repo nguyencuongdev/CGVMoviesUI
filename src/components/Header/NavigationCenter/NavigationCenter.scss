@@ -1,0 +1,19 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.nav-menu-center {
+    @include width-layout-default;
+    height: 100%;
+}
+
+.nav-menu-content {
+    min-width: 240px;
+}
+
+.header-center-wrapper {
+    @include width-layout-default;
+}
+
+.menu-content,
+.menu-sub-content {
+    background: url(./imgs/bg_menu_hover.png) repeat scroll center center rgba(0, 0, 0, 0);
+}

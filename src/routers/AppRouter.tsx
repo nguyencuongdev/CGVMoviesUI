@@ -27,16 +27,6 @@ const AppRouter = () => {
     );
   }, [user]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setUser({ name: 'Admin', role: 'admin' });
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  console.log(user.name);
-
   // Render the routes with the provided layout
   return handleGenerateRoutes();
 };
