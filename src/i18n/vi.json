@@ -1,4 +1,5 @@
 {
+    "buy-ticket": "Mua vé",
     "name-company": "CÔNG TY TNHH CJ CGV VIỆT NAM",
     "description-summary": "Giấy Chứng nhận đăng ký doanh nghiệp: 0303675393 đăng ký lần đầu ngày 31/7/2008, được cấp bởi Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh",
     "address-company": "Địa chỉ: Lầu 2, số 7/28, Đường Thành Thái, Phường 14, Quận 10, Thành phố Hồ Chí Minh, Việt Nam",
@@ -24,5 +25,13 @@
     "navigation-cultureplex-hall-rental": "Thuê Rap và vé nhóm",
     "navigation-cultureplex-e-cgv": "E-CGV",
     "navigation-cultureplex-egiff": "CGV eGift",
-    "navigation-cultureplex-rules": "CGV Rules"
+    "navigation-cultureplex-rules": "CGV Rules",
+    "movie-title-detail-page": "Nội dung chi tiết phim",
+    "movie-director-label": "Đạo diễn",
+    "movie-cats-label": "Diễn viên",
+    "movie-types-label": "Thể loại",
+    "movie-release-date-label": "Ngày khởi chiếu",
+    "movie-running-time-label": "Thời lượng",
+    "movie-language-label": "Ngôn ngữ",
+    "movie-age-label": "Độ tuổi"
 }

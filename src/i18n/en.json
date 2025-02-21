@@ -1,4 +1,5 @@
 {
+    "buy-ticket": "Buy ticket",
     "name-company": "COMPANY CJ CGV VIETNAM",
     "description-summary": "Business registration certificate: 0303675393, registered for the first time on 31/7/2008, registered for the fifth change on 14/10/2015, issued by HCMC Department of Planning and Investment.",
     "address-company": "Address: Floor 2, Rivera Park Saigon - No. 7/28 Thanh Thai street, Ward 14, District 10, HCMC.",
@@ -24,5 +25,13 @@
     "navigation-cultureplex-hall-rental": "Hall Rental & Group Sale",
     "navigation-cultureplex-e-cgv": "E-CGV",
     "navigation-cultureplex-egiff": "CGV eGift",
-    "navigation-cultureplex-rules": "CGV Rules"
+    "navigation-cultureplex-rules": "CGV Rules",
+    "movie-title-detail-page": "Movie Details",
+    "movie-director-label": "Director",
+    "movie-cats-label": "Cats",
+    "movie-types-label": "Genres",
+    "movie-release-date-label": "Release Date",
+    "movie-running-time-label": "Running Time",
+    "movie-language-label": "Language",
+    "movie-age-label": "Rated"
 }

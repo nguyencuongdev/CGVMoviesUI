@@ -1,0 +1,45 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.title-page {
+    @include width-layout-default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.title-page-text {
+    text-transform: capitalize;
+}
+
+.movie-content {
+    @include width-layout-default;
+}
+
+.movie-poster {
+    width: 182px;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-name {
+    text-transform: uppercase;
+}
+
+.movie-btn-item {
+    font-size: 12px;
+    background-color: var(--primary-color);
+    width: 50%;
+}
+
+.movie-btn-item.btn-like {
+    height: 26px;
+    width: 80px;
+}
+
+.movie-description {
+    @include width-layout-default;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
