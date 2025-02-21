@@ -1,7 +1,7 @@
+@use "@/assets/sass/__common.scss" as *;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @keyframes logo-spin {
     from {
@@ -111,6 +111,7 @@
         --text-color: #666;
         --text-black: #222;
         --primary-color: #e71a0f;
+        --primary-hover-color: #df5750;
         --background-container-color: hsl(55, 76%, 97%);
         --height-header-top: 30px;
     }
@@ -128,8 +129,8 @@
     body {
         @apply bg-background text-foreground;
     }
-}
 
-h1 {
-    color: red;
+    .sperator {
+        @include width-layout-default;
+    }
 }

@@ -1,0 +1,31 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.movie-hot-content {
+    @include width-layout-default;
+    margin-top: 24px;
+}
+
+.carousel-btn {
+    background-color: var(--primary-color);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.movie-hot-info {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.movie-hot-info,
+.movie-hot-play-trailer {
+    display: none;
+}
+
+.movie-hot-item:hover .movie-hot-info {
+    display: block;
+}
+
+.movie-hot-item:hover .movie-hot-play-trailer {
+    display: flex;
+}

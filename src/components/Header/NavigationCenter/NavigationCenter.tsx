@@ -73,7 +73,7 @@ const navigationCenterList = [
       },
       {
         icon: null,
-        label: 'navigation-membership-benefits',
+        label: 'navigation-membership-benefit',
         to: '/accounts/cgv-membership',
         childrens: null,
       },

@@ -33,12 +33,17 @@ const data = [
 
 function Banner() {
   const [api, setApi] = useState<CarouselApi>();
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   useEffect(() => {
     let timmer: string | number | NodeJS.Timeout | undefined;
     const startAutoplay = () => {
       clearInterval(timmer);
       timmer = setInterval(() => {
+        setCurrentIndex(prev => {
+          if (prev === data.length - 1) return 0;
+          return prev + 1;
+        });
         api?.scrollNext();
       }, 5000);
     };
@@ -46,6 +51,10 @@ function Banner() {
     const stopAutoplay = () => {
       if (api) clearInterval(timmer);
     };
+
+    api?.on('select', () => {
+      setCurrentIndex(api?.selectedScrollSnap());
+    });
 
     api?.on('pointerDown', stopAutoplay);
     api?.on('pointerUp', startAutoplay);
@@ -59,12 +68,13 @@ function Banner() {
 
   return (
     <div className={cn('banner')}>
-      <div className={cn('banner-container')}>
+      <div className={cn('banner-container relative')}>
         <Carousel
           opts={{
             align: 'start',
             loop: true,
             duration: 30,
+            startIndex: 0,
           }}
           setApi={setApi}>
           <CarouselContent>
@@ -81,6 +91,11 @@ function Banner() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+        <ul className={cn('dot-container flex space-x-1 absolute bottom-6 left-[50%] translate-x-[-50%]')}>
+          {data.map((_, index) => (
+            <li key={index} className={cn('dot-item', index === currentIndex && 'dot-item--active')} />
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -1,0 +1,14 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.footer-compary {
+    @include width-layout-default;
+}
+
+.infor-item {
+    line-height: 16px;
+}
+
+.footer-background {
+    background-image: url('./imgs/bg-bottom-footer.jpg');
+    height: 114px;
+}
