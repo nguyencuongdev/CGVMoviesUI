@@ -1,5 +1,5 @@
 import { Footer, Header } from '@/components';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import './DefaultLayout.scss';
 
 function DefaultLayout({ children }: { children: React.ReactNode }) {

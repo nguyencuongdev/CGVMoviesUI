@@ -1,8 +1,8 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import './MovieDetail.scss';
 import { FormattedMessage } from 'react-intl';
 import { Button } from '@/components/ui';
-
+import { useState } from 'react';
 const movie = {
   name: 'Nhà gia tiên',
   director: 'Huỳnh Lập',
@@ -21,6 +21,7 @@ const movie = {
 };
 
 function MovieDetail() {
+  const [isOpenDescription, setIsOpenDescription] = useState<boolean>(true);
   return (
     <div>
       <div className={cn('title-page my-3')}>
@@ -31,7 +32,10 @@ function MovieDetail() {
       </div>
       <div className={cn('movie-content flex')}>
         <div className={cn('movie-poster mr-6')}>
-          <img src={movie.posterMovie} alt='movie poster' />
+          <div className={cn('movie-poster-img')}>
+            <img src={movie.posterMovie} alt='movie poster' />
+          </div>
+          <div className={cn('movie-poster-img')}></div>
           <div className={cn('movie-btn mt-3 flex justify-between')}>
             <Button className={cn('movie-btn-item !bg-blue-500 btn-like')}>Like: 150</Button>
             <Button className={cn('movie-btn-item ml-2')}>Mua vé</Button>
@@ -85,7 +89,28 @@ function MovieDetail() {
         </div>
       </div>
       <div className={cn('movie-description my-6')}>
-        <p className={cn('movie-description-text text-sm text-[#222] text-justify')}>{movie.descriptionMovie}</p>
+        <div className={cn('movie-toggle flex justify-center')}>
+          <div className={cn('movie-toggle-bg flex')}>
+            <Button
+              className={cn(
+                'text-white text-sm bg-transparent p-0 shadow-none border-none hover:bg-transparent focus:bg-transparent w-[120px]',
+              )}
+              onClick={() => setIsOpenDescription(true)}>
+              <FormattedMessage id='movie-detail-descrition-label' />
+            </Button>
+            <div className={cn('w-[1px] h-full bg-white mx-3')} />
+            <Button
+              className={cn(
+                'text-white text-sm bg-transparent p-0 shadow-none border-none hover:bg-transparent focus:bg-transparent w-[120px]',
+              )}
+              onClick={() => setIsOpenDescription(false)}>
+              <FormattedMessage id='movie-detail-trailer-label' />
+            </Button>
+          </div>
+        </div>
+        {isOpenDescription && (
+          <p className={cn('movie-description-text text-sm text-[#222] text-justify')}>{movie.descriptionMovie}</p>
+        )}
       </div>
     </div>
   );

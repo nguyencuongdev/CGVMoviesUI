@@ -1,7 +1,7 @@
 import './Footer.scss';
 import { FormattedMessage } from 'react-intl';
 import LogoCGVCompany from '@/assets/images/logo_cgv_footer.png';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 
 function Footer() {
   return (

@@ -6,7 +6,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 
 import './Banner.scss';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import { Category, Banner, MovieSelection, Event } from '@/containers/Home';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 
 const HomePage = () => {
   return (

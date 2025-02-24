@@ -14,13 +14,8 @@
     @include width-layout-default;
 }
 
-.movie-poster {
+.movie-poster-img {
     width: 182px;
-}
-
-.movie-poster img {
-    width: 100%;
-    height: auto;
 }
 
 .movie-name {
@@ -42,4 +37,42 @@
     @include width-layout-default;
     margin-top: 24px;
     margin-bottom: 24px;
+}
+
+.movie-toggle {
+    @include width-layout-default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.movie-toggle-bg {
+    position: relative;
+    background: var(--primary-color);
+    padding: 0 24px;
+}
+
+.movie-toggle-bg::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    left: 0;
+    border-width: 18px 24px;
+    border-color: transparent;
+    border-left-color: #fdfcf2;
+}
+
+.movie-toggle-bg::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    right: 0;
+    border-width: 18px 24px;
+    border-color: transparent;
+    border-right-color: #fdfcf2;
 }

@@ -33,5 +33,7 @@
     "movie-release-date-label": "Ngày khởi chiếu",
     "movie-running-time-label": "Thời lượng",
     "movie-language-label": "Ngôn ngữ",
-    "movie-age-label": "Độ tuổi"
+    "movie-age-label": "Độ tuổi",
+    "movie-detail-descrition-label": "Chi tiết",
+    "movie-detail-trailer-label": "Trailer"
 }

@@ -2,7 +2,7 @@ import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/componen
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import './MovieSelection.scss';
 import { MovieHot } from '@/types';
 import { Button } from '@/components/ui';

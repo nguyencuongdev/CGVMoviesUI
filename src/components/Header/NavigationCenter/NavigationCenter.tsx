@@ -13,7 +13,7 @@ import {
 import CGVLogo from '@/assets/images/cgvlogo.png';
 import BuyTicket from '@/assets/images/mua-ve_ngay.png';
 import './NavigationCenter.scss';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 
 const navigationCenterList = [
   {

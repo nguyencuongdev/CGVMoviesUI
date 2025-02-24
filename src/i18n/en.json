@@ -33,5 +33,7 @@
     "movie-release-date-label": "Release Date",
     "movie-running-time-label": "Running Time",
     "movie-language-label": "Language",
-    "movie-age-label": "Rated"
+    "movie-age-label": "Rated",
+    "movie-detail-descrition-label": "Description",
+    "movie-detail-trailer-label": "Trailer"
 }

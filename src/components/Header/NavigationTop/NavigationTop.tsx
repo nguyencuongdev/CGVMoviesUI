@@ -5,7 +5,7 @@ import IconNewsOffer from '@/assets/images/icons/icon_promotion25.png';
 import IconTicket from '@/assets/images/icons/icon_ticket25.png';
 import IconLogin from '@/assets/images/icons/icon_login25.png';
 import { Button } from '../../ui/button';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import { localeActions } from '@/store/localeSlice';
 import './NavigationTop.scss';
 import { RootStateType } from '@/store';
