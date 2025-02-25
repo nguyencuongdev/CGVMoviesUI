@@ -19,7 +19,7 @@ function MovieNowShowing() {
       <div className={cn('sperator h-[2px] mb-3 bg-black')} />
       <div className={cn(styles['movie-now-showing-list'], 'grid grid-cols-4 gap-x-16 gap-y-6')}>
         <div className={cn(styles['movie-now-showing-item'], 'relative')}>
-          <div className={cn(styles['movie-now-showing-item__img'])}>
+          <div className={cn(styles['movie-now-showing-item__img'], 'p-1 bg-black')}>
             <img src='/imgs/poster-movies/nha_gia_tien.jpg' alt='poster phim nha gia tien' />
           </div>
           <div
@@ -67,7 +67,7 @@ function MovieNowShowing() {
           </div>
         </div>
         <div className={cn(styles['movie-now-showing-item'], 'relative')}>
-          <div className={cn(styles['movie-now-showing-item__img'])}>
+          <div className={cn(styles['movie-now-showing-item__img'], 'p-1 bg-black')}>
             <img src='/imgs/poster-movies/nha_gia_tien.jpg' alt='poster phim nha gia tien' />
           </div>
           <div
@@ -115,7 +115,7 @@ function MovieNowShowing() {
           </div>
         </div>
         <div className={cn(styles['movie-now-showing-item'], 'relative')}>
-          <div className={cn(styles['movie-now-showing-item__img'])}>
+          <div className={cn(styles['movie-now-showing-item__img'], 'p-1 bg-black')}>
             <img src='/imgs/poster-movies/nha_gia_tien.jpg' alt='poster phim nha gia tien' />
           </div>
           <div
@@ -163,7 +163,7 @@ function MovieNowShowing() {
           </div>
         </div>
         <div className={cn(styles['movie-now-showing-item'], 'relative')}>
-          <div className={cn(styles['movie-now-showing-item__img'])}>
+          <div className={cn(styles['movie-now-showing-item__img'], 'p-1 bg-black')}>
             <img src='/imgs/poster-movies/nha_gia_tien.jpg' alt='poster phim nha gia tien' />
           </div>
           <div
@@ -211,7 +211,7 @@ function MovieNowShowing() {
           </div>
         </div>
         <div className={cn(styles['movie-now-showing-item'], 'relative')}>
-          <div className={cn(styles['movie-now-showing-item__img'])}>
+          <div className={cn(styles['movie-now-showing-item__img'], 'p-1 bg-black')}>
             <img src='/imgs/poster-movies/nha_gia_tien.jpg' alt='poster phim nha gia tien' />
           </div>
           <div
@@ -259,7 +259,7 @@ function MovieNowShowing() {
           </div>
         </div>
         <div className={cn(styles['movie-now-showing-item'], 'relative')}>
-          <div className={cn(styles['movie-now-showing-item__img'])}>
+          <div className={cn(styles['movie-now-showing-item__img'], 'p-1 bg-black')}>
             <img src='/imgs/poster-movies/nha_gia_tien.jpg' alt='poster phim nha gia tien' />
           </div>
           <div
