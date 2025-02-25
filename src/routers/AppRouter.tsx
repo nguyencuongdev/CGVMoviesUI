@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from './config';
+import { routes } from './config';
 import { useCallback, useEffect, useState } from 'react';
 
 const AppRouter = () => {
@@ -12,7 +12,7 @@ const AppRouter = () => {
     return (
       <BrowserRouter>
         <Routes>
-          {publicRoutes.map(({ path, layout: Layout, element, roles }) => {
+          {routes.map(({ path, layout: Layout, element, roles }) => {
             if (roles && !roles.includes(user.role)) return null;
 
             if (Layout) {

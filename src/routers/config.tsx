@@ -1,4 +1,4 @@
-import { HomePage, MovieDetail } from '@/pages';
+import { HomePage, MovieDetail, MovieNowShowing } from '@/pages';
 import { DefaultLayout } from '@/layouts/';
 
 type Route = {
@@ -8,7 +8,7 @@ type Route = {
   element: JSX.Element;
 };
 
-export const publicRoutes: Route[] = [
+export const routes: Route[] = [
   {
     path: '/',
     roles: null,
@@ -20,5 +20,11 @@ export const publicRoutes: Route[] = [
     roles: null,
     layout: DefaultLayout,
     element: <MovieDetail />,
+  },
+  {
+    path: '/movies/now-showing',
+    roles: null,
+    layout: DefaultLayout,
+    element: <MovieNowShowing />,
   },
 ];

@@ -1,4 +1,5 @@
 {
+    "like-label": "Like",
     "buy-ticket": "Buy ticket",
     "name-company": "COMPANY CJ CGV VIETNAM",
     "description-summary": "Business registration certificate: 0303675393, registered for the first time on 31/7/2008, registered for the fifth change on 14/10/2015, issued by HCMC Department of Planning and Investment.",
@@ -35,5 +36,7 @@
     "movie-language-label": "Language",
     "movie-age-label": "Rated",
     "movie-detail-descrition-label": "Description",
-    "movie-detail-trailer-label": "Trailer"
+    "movie-detail-trailer-label": "Trailer",
+    "movie-now-showing-title": "Movie Now Showing",
+    "movie-comming-son-title": "Movie Comming son"
 }

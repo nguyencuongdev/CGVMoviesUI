@@ -1,4 +1,5 @@
 {
+    "like-label": "Thích",
     "buy-ticket": "Mua vé",
     "name-company": "CÔNG TY TNHH CJ CGV VIỆT NAM",
     "description-summary": "Giấy Chứng nhận đăng ký doanh nghiệp: 0303675393 đăng ký lần đầu ngày 31/7/2008, được cấp bởi Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh",
@@ -35,5 +36,7 @@
     "movie-language-label": "Ngôn ngữ",
     "movie-age-label": "Độ tuổi",
     "movie-detail-descrition-label": "Chi tiết",
-    "movie-detail-trailer-label": "Trailer"
+    "movie-detail-trailer-label": "Trailer",
+    "movie-now-showing-title": "Phim Đang Chiếu",
+    "movie-comming-son-title": "Phim Sắp Chiếu"
 }

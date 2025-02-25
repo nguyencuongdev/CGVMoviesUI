@@ -1,0 +1,31 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.movie-now-showing-title {
+    @include width-layout-default;
+    margin-top: 12px;
+    position: relative;
+    line-height: 28px;
+    top: 2px;
+}
+
+.movie-comming-son-title {
+    @include width-layout-default;
+}
+
+.movie-now-showing-list {
+    @include width-layout-default;
+}
+
+.movie-now-showing-item__img {
+    aspect-ratio: 4/6;
+}
+
+.movie-now-showing-item__img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-now-showing-name {
+    line-height: 16px;
+}
