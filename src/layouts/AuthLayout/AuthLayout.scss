@@ -1,0 +1,5 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.main-container {
+    @include width-layout-default;
+}

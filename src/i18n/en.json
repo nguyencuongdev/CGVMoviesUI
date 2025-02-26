@@ -38,5 +38,7 @@
     "movie-detail-descrition-label": "Description",
     "movie-detail-trailer-label": "Trailer",
     "movie-now-showing-title": "Movie Now Showing",
-    "movie-comming-son-title": "Movie Comming son"
+    "movie-comming-son-title": "Movie Comming son",
+    "login-label": "Login",
+    "register-label": "Register"
 }
