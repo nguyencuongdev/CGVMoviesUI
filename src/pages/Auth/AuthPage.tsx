@@ -3,10 +3,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui';
 import { useLocation } from 'react-router-dom';
 import './AuthPage.scss';
 import { FormattedMessage } from 'react-intl';
+import { LoginForm } from '@/containers/Auth';
 
 function AuthPage() {
   const location = useLocation();
-  console.log(location);
 
   return (
     <div className={cn('login-page')}>
@@ -30,7 +30,7 @@ function AuthPage() {
           </TabsList>
           <TabsContent value='login-form'>
             <div>
-              <h1>Login</h1>
+              <LoginForm />
             </div>
           </TabsContent>
           <TabsContent value='register-form'>

@@ -40,5 +40,15 @@
     "movie-now-showing-title": "Movie Now Showing",
     "movie-comming-son-title": "Movie Comming son",
     "login-label": "Login",
-    "register-label": "Register"
+    "register-label": "Register",
+    "login-form-input-account-label": "Email or phone number",
+    "login-form-input-password-label": "Password",
+    "login-form-input-account-placeholder": "Enter email or phone number",
+    "login-form-input-password-placeholder": "Enter password",
+    "login-form-btn-submit-label": "Login",
+    "login-form-account-validation-required": "Account required!",
+    "login-form-account-is-phonenumber-email": "Account not valid!",
+    "login-form-password-validation-required": "Password required!",
+    "login-form-password-validation-min": "Password must be at least 8 characters!",
+    "login-form-password-validation-max": "Passwords are only allowed up to 50 characters!"
 }
