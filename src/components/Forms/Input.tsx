@@ -12,6 +12,7 @@ type TInputProps<T extends FieldValues> = React.InputHTMLAttributes<HTMLInputEle
   control: Control<T>;
   required?: boolean;
   disabled?: boolean;
+  onChange?: () => void;
 };
 
 const Input = <T extends FieldValues>({
@@ -22,6 +23,7 @@ const Input = <T extends FieldValues>({
   name,
   control,
   disabled,
+  onChange,
   ...props
 }: TInputProps<T>) => {
   const { formatMessage } = useIntl();
@@ -62,6 +64,10 @@ const Input = <T extends FieldValues>({
                   },
                 )}
                 ref={inputRef}
+                onChange={event => {
+                  onChange?.();
+                  field.onChange(event);
+                }}
                 disabled={disabled}
                 {...props}
               />

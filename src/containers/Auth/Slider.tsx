@@ -68,7 +68,7 @@ function Slider(props: SliderProps) {
             </div>
           </CarouselItem>
         </CarouselContent>
-        <ul className={cn('dot-container flex space-x-1 absolute bottom-2 left-[50%] translate-x-[-50%]')}>
+        <ul className={cn('dot-container flex space-x-1 absolute bottom-[-24px] left-[50%] translate-x-[-50%] ')}>
           {Array.from({ length: 3 }).map((_, index) => (
             <li key={index} className={cn('dot-item', index === currentIndex && 'dot-item--active')} />
           ))}
