@@ -1,17 +1,17 @@
-import styles from './MovieCommingSon.module.scss';
+import styles from './MovieCommingSoon.module.scss';
 import { Button } from '@/components/ui';
 import { cn } from '@/libs/utils';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { LikeIcon, TicketIcon } from '@/assets/icons';
 
-function MovieCommingSon() {
+function MovieCommingSoon() {
   return (
     <div className={cn(styles['movie-comming-son'])}>
       <h1 className={cn(styles['movie-comming-son-title'], 'text-[28px] text-[#222] my-3')}>
         <FormattedMessage id='movie-comming-son-title' />
       </h1>
-      <div className={cn('flex justify-end', styles['movie-comming-son-title'])}>
+      <div className={cn('flex justify-end', styles['movie-now-showing-title'])}>
         <Link to='/movies/now-showing'>
           <FormattedMessage id='movie-now-showing-title' />
         </Link>
@@ -311,4 +311,4 @@ function MovieCommingSon() {
   );
 }
 
-export default MovieCommingSon;
+export default MovieCommingSoon;

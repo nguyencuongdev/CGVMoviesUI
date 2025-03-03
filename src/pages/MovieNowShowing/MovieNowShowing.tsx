@@ -12,7 +12,7 @@ function MovieNowShowing() {
         <FormattedMessage id='movie-now-showing-title' />
       </h1>
       <div className={cn('flex justify-end', styles['movie-comming-son-title'])}>
-        <Link to='/movies/comming-son'>
+        <Link to='/movies/comming-soon'>
           <FormattedMessage id='movie-comming-son-title' />
         </Link>
       </div>

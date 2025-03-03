@@ -13,6 +13,10 @@
     margin-top: 12px;
 }
 
+.movie-now-showing-title {
+    @include width-layout-default;
+}
+
 .movie-comming-son-list {
     @include width-layout-default;
 }

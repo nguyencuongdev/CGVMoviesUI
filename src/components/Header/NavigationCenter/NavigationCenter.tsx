@@ -254,7 +254,7 @@ function NavigationCenter() {
           <NavigationMenu listMenu={navigationCenterList} className={cn('mt-[30px]')} />
         </div>
         <div>
-          <Link to='/buy-ticket'>
+          <Link to='/movies/now-showing'>
             <img src={BuyTicket} alt='image buy ticket' />
           </Link>
         </div>
