@@ -15,6 +15,7 @@ type TSelectOption = {
 };
 
 type TMultiSelectProps<T extends FieldValues> = {
+  fieldNameMessage?: string;
   label?: string;
   name: Path<T>;
   control: Control<T>;
@@ -28,6 +29,7 @@ type TMultiSelectProps<T extends FieldValues> = {
 };
 
 const MultiSelectForm = <T extends FieldValues>({
+  fieldNameMessage = '',
   label,
   name,
   control,
@@ -107,7 +109,12 @@ const MultiSelectForm = <T extends FieldValues>({
               </PopoverContent>
               {fieldState.error && (
                 <p className={cn('text-[12px] text-red-500 mt-1 pl-2')}>
-                  {formatMessage({ id: fieldState.error.message })}
+                  {formatMessage(
+                    { id: fieldState.error.message },
+                    {
+                      fieldName: fieldNameMessage,
+                    },
+                  )}
                 </p>
               )}
             </Popover>

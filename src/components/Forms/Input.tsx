@@ -6,6 +6,7 @@ import { EyeHidenIcon, EyeIcon } from '@/assets/icons';
 import { useRef, useState } from 'react';
 
 type TInputProps<T extends FieldValues> = React.InputHTMLAttributes<HTMLInputElement> & {
+  fieldNameMessage?: string;
   label?: string;
   placeholder?: string;
   name: Path<T>;
@@ -16,6 +17,7 @@ type TInputProps<T extends FieldValues> = React.InputHTMLAttributes<HTMLInputEle
 };
 
 const Input = <T extends FieldValues>({
+  fieldNameMessage = '',
   label,
   placeholder,
   required = false,
@@ -87,7 +89,12 @@ const Input = <T extends FieldValues>({
             </div>
             {fieldState.error && (
               <p className={cn('text-[12px] text-red-500 mt-1 pl-2')}>
-                {formatMessage({ id: fieldState.error.message })}
+                {formatMessage(
+                  { id: fieldState.error.message },
+                  {
+                    fieldName: fieldNameMessage,
+                  },
+                )}
               </p>
             )}
           </>

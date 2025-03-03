@@ -9,6 +9,7 @@ type TRadioOption = {
   id: string;
 };
 type TRadioProps<T extends FieldValues> = {
+  fieldNameMessage?: string;
   label?: string;
   name: Path<T>;
   control: Control<T>;
@@ -20,6 +21,7 @@ type TRadioProps<T extends FieldValues> = {
 };
 
 const RadioGroup = <T extends FieldValues>({
+  fieldNameMessage = '',
   label,
   required = false,
   className,
@@ -62,7 +64,12 @@ const RadioGroup = <T extends FieldValues>({
 
             {fieldState.error && (
               <p className={cn('text-[12px] text-red-500 mt-1 pl-2')}>
-                {formatMessage({ id: fieldState.error.message })}
+                {formatMessage(
+                  { id: fieldState.error.message },
+                  {
+                    fieldName: fieldNameMessage,
+                  },
+                )}
               </p>
             )}
           </>

@@ -8,6 +8,7 @@ import { Calendar } from 'lucide-react';
 import { vi, enUS } from 'date-fns/locale';
 
 type TDatePickerProps<T extends FieldValues> = {
+  fieldNameMessage?: string;
   label?: string;
   name: Path<T>;
   control: Control<T>;
@@ -18,6 +19,7 @@ type TDatePickerProps<T extends FieldValues> = {
 };
 
 const DatePicker = <T extends FieldValues>({
+  fieldNameMessage = '',
   label,
   required = false,
   className,
@@ -59,7 +61,9 @@ const DatePicker = <T extends FieldValues>({
               calendarIconClassName={cn('right-1')}
               dropdownMode='select'
               locale={getLocale(locale as 'vi' | 'en')}
+              dateFormat={locale === 'vi' ? 'dd/MM/YYYY' : 'yyyy/MM/dd'}
               selected={field.value}
+              maxDate={new Date(new Date().setDate(new Date().getDate() - 1))}
               onChange={date => {
                 field.onChange(date);
                 onChange?.();
@@ -68,7 +72,12 @@ const DatePicker = <T extends FieldValues>({
             />
             {fieldState.error && (
               <p className={cn('text-[12px] text-red-500 mt-1 pl-2')}>
-                {formatMessage({ id: fieldState.error.message })}
+                {formatMessage(
+                  { id: fieldState.error.message },
+                  {
+                    fieldName: fieldNameMessage,
+                  },
+                )}
               </p>
             )}
           </div>

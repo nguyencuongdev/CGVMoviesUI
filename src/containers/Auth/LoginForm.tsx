@@ -8,7 +8,11 @@ import { Button } from '@/components/ui';
 import { Input } from '@/components/Forms';
 import { TLoginForm, defaultValueLoginForm } from './config';
 import { loginValidationSchema } from '@/libs/yup/authSchema.validation';
+import { useSelector } from 'react-redux';
+import { RootStateType } from '@/store';
+
 function LoginForm() {
+  const { locale } = useSelector((state: RootStateType) => state.locale);
   const { control, handleSubmit } = useForm<TLoginForm>({
     defaultValues: defaultValueLoginForm,
     resolver: yupResolver(loginValidationSchema),
@@ -19,7 +23,7 @@ function LoginForm() {
   };
 
   return (
-    <div className={cn('form-login-container', 'px-6 py-3')}>
+    <div className={cn('form-login-container', 'px-6 py-3 bg-white')}>
       <form className={cn('form-login')} onSubmit={handleSubmit(onSubmit)}>
         <div>
           <Input
@@ -29,6 +33,7 @@ function LoginForm() {
             placeholder='login-form-input-account-placeholder'
             required
             type='text'
+            fieldNameMessage={locale === 'vi' ? 'Tài khoản' : 'Account'}
           />
         </div>
         <div className={cn('mt-4 relative')}>
@@ -39,6 +44,7 @@ function LoginForm() {
             placeholder='login-form-input-password-placeholder'
             required
             type='password'
+            fieldNameMessage={locale === 'vi' ? 'Mật khẩu' : 'Password'}
           />
         </div>
         <Button type='submit' className={cn('w-full mt-6 bg-[#e71a0f] rounded-none hover:bg-[#ef554d]')}>

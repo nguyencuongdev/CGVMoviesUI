@@ -19,13 +19,15 @@ export const defaultValueLoginForm = {
   password: '',
 };
 
+const yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
 export const defaultValueRegisterForm = {
   name: '',
   phoneNumber: '',
   email: '',
   password: '',
   rePassword: '',
-  dateOfBirth: new Date(),
+  dateOfBirth: yesterday,
   gender: '1',
   faviousRaps: [],
 };
