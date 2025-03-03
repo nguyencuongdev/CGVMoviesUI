@@ -133,4 +133,17 @@
     .sperator {
         @include width-layout-default;
     }
+
+    .datepicker-container .react-datepicker-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    .datepicker-container .react-datepicker__view-calendar-icon input {
+        padding: 4px 12px;
+        font-size: 14px;
+        height: 36px;
+        font-family: 'Verdana',
+            sans-serif;
+    }
 }

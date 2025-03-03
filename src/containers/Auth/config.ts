@@ -11,8 +11,6 @@ export type TRegisterForm = {
   rePassword: string;
   dateOfBirth: Date;
   gender: string;
-  locationCity: string;
-  locationDistrict: string;
   faviousRaps: string[];
 };
 
@@ -29,7 +27,5 @@ export const defaultValueRegisterForm = {
   rePassword: '',
   dateOfBirth: new Date(),
   gender: '1',
-  locationCity: '',
-  locationDistrict: '',
   faviousRaps: [],
 };

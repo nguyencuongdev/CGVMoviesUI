@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Control, Controller, FieldValues, Path } from 'react-hook-form';
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { Button } from '@/components/ui';
-import { Command, CommandGroup, CommandItem } from '@/components/ui/command';
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from '@/components/ui/command';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ChevronDown } from 'lucide-react';
 import { CommandList } from 'cmdk';
@@ -31,6 +31,7 @@ const MultiSelectForm = <T extends FieldValues>({
   label,
   name,
   control,
+  disabled,
   options,
   required = false,
   placeholder = 'Select options',
@@ -49,7 +50,7 @@ const MultiSelectForm = <T extends FieldValues>({
       <Controller
         name={name}
         control={control}
-        render={({ field }) => {
+        render={({ field, fieldState }) => {
           const toggleSelection = (value: string) => {
             const newValues = field.value?.includes(value)
               ? field.value.filter((v: string) => v !== value) // Bỏ chọn nếu đã có
@@ -57,6 +58,23 @@ const MultiSelectForm = <T extends FieldValues>({
 
             field.onChange(newValues);
           };
+
+          if (disabled) {
+            return (
+              <Button
+                variant='outline'
+                disabled
+                className='w-full justify-between bg-white cursor-pointer hover:cursor-not-allowed'>
+                {field.value?.length > 0
+                  ? options
+                      .filter(opt => field.value.includes(opt.value))
+                      .map(opt => opt.label)
+                      .join(', ')
+                  : formatMessage({ id: placeholder })}
+                <ChevronDown className='ml-2 h-4 w-4 opacity-50' />
+              </Button>
+            );
+          }
 
           return (
             <Popover open={open} onOpenChange={setOpen}>
@@ -73,7 +91,9 @@ const MultiSelectForm = <T extends FieldValues>({
               </PopoverTrigger>
               <PopoverContent className={cn('p-2')}>
                 <Command className='w-full'>
+                  <CommandInput placeholder='Type a command or search...' />
                   <CommandList>
+                    <CommandEmpty>No results found.</CommandEmpty>
                     <CommandGroup>
                       {options.map(option => (
                         <CommandItem key={option.value} onSelect={() => toggleSelection(option.value)}>
@@ -85,6 +105,11 @@ const MultiSelectForm = <T extends FieldValues>({
                   </CommandList>
                 </Command>
               </PopoverContent>
+              {fieldState.error && (
+                <p className={cn('text-[12px] text-red-500 mt-1 pl-2')}>
+                  {formatMessage({ id: fieldState.error.message })}
+                </p>
+              )}
             </Popover>
           );
         }}

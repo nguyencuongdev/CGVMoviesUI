@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import { cn } from '@/libs/utils';
 import { Button } from '@/components/ui';
-import { Input, RadioGroup, MultiSelect } from '@/components/Forms';
+import { Input, RadioGroup, MultiSelect, DatePicker } from '@/components/Forms';
 import { TRegisterForm, defaultValueRegisterForm } from './config';
 
 function RegisterForm() {
@@ -70,41 +70,35 @@ function RegisterForm() {
             type='password'
           />
         </div>
-        <div className={cn('mt-4')}>
-          <Input
-            name='dateOfBirth'
-            control={control}
-            label='register-form-input-dob-label'
-            placeholder='register-form-input-dob-placeholder'
-            required
-            type='date'
-          />
-        </div>
-        <div className={cn('mt-4')}>
-          <RadioGroup
-            name='gender'
-            label='register-form-gender-label'
-            className='flex'
-            options={[
-              {
-                label: 'register-form-gender-option-male-label',
-                value: '1',
-                id: 'gender-male',
-              },
-              {
-                label: 'register-form-gender-option-female-label',
-                value: '0',
-                id: 'gender-female',
-              },
-            ]}
-            control={control}
-            required
-          />
+        <div className={cn('mt-4 flex justify-between items-center')}>
+          <div className={cn('flex-1')}>
+            <DatePicker name='dateOfBirth' control={control} label='register-form-input-dob-label' required />
+          </div>
+          <div className={cn('flex-1 ml-3')}>
+            <RadioGroup
+              name='gender'
+              label='register-form-gender-label'
+              className='flex'
+              options={[
+                {
+                  label: 'register-form-gender-option-male-label',
+                  value: '1',
+                  id: 'gender-male',
+                },
+                {
+                  label: 'register-form-gender-option-female-label',
+                  value: '0',
+                  id: 'gender-female',
+                },
+              ]}
+              control={control}
+              required
+            />
+          </div>
         </div>
         <div className={cn('mt-4')}>
           <MultiSelect
             label='register-form-favious-raps-label'
-            required
             name='faviousRaps'
             widthContentOptions={400}
             control={control}
