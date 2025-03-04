@@ -76,5 +76,7 @@
     "register-form-gender-option-female-label": "Nữ",
     "register-form-gender-option-male-label": "Nam",
     "register-form-favious-raps-label": "Rạp yêu thích",
-    "register-form-input-dob-label": "Ngày sinh"
+    "register-form-input-dob-label": "Ngày sinh",
+    "#6": "============================ SITES =============================",
+    "sites-title": "CGV CINEMAS"
 }

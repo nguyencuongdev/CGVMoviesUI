@@ -78,5 +78,7 @@
     "register-form-gender-option-female-label": "Female",
     "register-form-gender-option-male-label": "Male",
     "register-form-favious-raps-label": "Favious sites",
-    "register-form-input-dob-label": "Date of Birth"
+    "register-form-input-dob-label": "Date of Birth",
+    "#6": "============================ SITES =============================",
+    "sites-title": "CGV CINEMAS"
 }
