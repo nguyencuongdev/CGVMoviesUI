@@ -6,7 +6,7 @@ function Category() {
     <div className='categorys-container my-3 py-3 border-b border-black'>
       <div className='categorys flex'>
         <div className='categorys-item flex-1 border-r border-black'>
-          <Link to='/raps' className='w-full h-full inline-block' />
+          <Link to='/sites' className='w-full h-full inline-block' />
         </div>
         <div className='categorys-item flex-1 border-r border-black'>
           <Link to='/movies/now-showing' className='w-full h-full inline-block' />

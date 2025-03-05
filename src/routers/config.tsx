@@ -1,4 +1,12 @@
-import { HomePage, MovieDetail, MovieNowShowing, MovieCommingSoon, AuthPage, SitesPage } from '@/pages';
+import {
+  HomePage,
+  MovieDetail,
+  MovieNowShowing,
+  MovieCommingSoon,
+  AuthPage,
+  SitesPage,
+  MoviesOfSitePage,
+} from '@/pages';
 import { DefaultLayout, AuthLayout } from '@/layouts/';
 
 type Route = {
@@ -50,5 +58,11 @@ export const routes: Route[] = [
     roles: null,
     layout: DefaultLayout,
     element: <SitesPage />,
+  },
+  {
+    path: '/sites/:id',
+    roles: null,
+    layout: DefaultLayout,
+    element: <MoviesOfSitePage />,
   },
 ];

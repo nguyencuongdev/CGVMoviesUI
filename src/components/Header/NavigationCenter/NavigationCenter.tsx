@@ -43,19 +43,19 @@ const navigationCenterList = [
       {
         icon: null,
         label: 'navigation-theaters-all',
-        to: '/raps',
+        to: '/sites',
         childrens: null,
       },
       {
         icon: null,
         label: 'navigation-theaters-special',
-        to: '/raps/theaters-special',
+        to: '/sites/theaters-special',
         childrens: null,
       },
       {
         icon: null,
         label: 'navigation-theaters-3d',
-        to: '/raps/3d',
+        to: '/sites/3d',
         childrens: null,
       },
     ],

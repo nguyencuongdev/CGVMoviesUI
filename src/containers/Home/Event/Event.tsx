@@ -41,7 +41,7 @@ function Event() {
         <h2 className={cn('flex items-center')}>
           <div className={cn('border-b border-t border-black h-2 flex-1')} />
           <div className={cn('mx-2')}>
-            <img src='./imgs/h3_event.gif' alt='event-title' />
+            <img src='/imgs/h3_event.gif' alt='event-title' />
           </div>
           <div className={cn('border-b border-t border-black h-2 flex-1')} />
         </h2>

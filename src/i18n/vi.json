@@ -25,7 +25,7 @@
     "navigation-movies": "Phim",
     "navigation-movies-now-showing": "Phim đang chiếu",
     "navigation-movies-comming-son": "Phim sắp chiếu",
-    "navigation-theaters": "Rap CGV",
+    "navigation-theaters": "Rạp CGV",
     "navigation-theaters-all": "Tất cả các rap",
     "navigation-theaters-special": "Rap đặc biệt",
     "navigation-theaters-3d": "Rap 3D",
@@ -78,5 +78,8 @@
     "register-form-favious-raps-label": "Rạp yêu thích",
     "register-form-input-dob-label": "Ngày sinh",
     "#6": "============================ SITES =============================",
-    "sites-title": "CGV CINEMAS"
+    "sites-title": "CGV CINEMAS",
+    "#7": "============================ MOVIES OF SITES =============================",
+    "movies-of-sites-schedule-label": "Lịch chiếu",
+    "movies-of-sites-ticket-price-label": "Giá vé"
 }

@@ -1,0 +1,31 @@
+@use "@/assets/sass/__common.scss" as *;
+
+.banner {
+    background: url(./imgs/bg_c_bricks.png);
+    height: 448px;
+}
+
+.banner-container {
+    @include width-layout-default;
+    background: transparent;
+}
+
+.dot-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #666;
+}
+
+.dot-item--active {
+    background-color: var(--primary-color);
+}
+
+.banner-info-site {
+    height: 108px;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0, 0.25);
+}

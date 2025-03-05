@@ -59,7 +59,7 @@ function MovieSelection() {
       <h2 className={cn('movie-hot-title flex items-center')}>
         <div className={cn('border-b border-t border-black h-2 flex-1')} />
         <div className={cn('mx-2')}>
-          <img src='./imgs/h3_movie_selection.gif' alt='movie-selection' />
+          <img src='/imgs/h3_movie_selection.gif' alt='movie-selection' />
         </div>
         <div className={cn('border-b border-t border-black h-2 flex-1')} />
       </h2>

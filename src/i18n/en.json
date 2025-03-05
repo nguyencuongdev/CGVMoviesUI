@@ -80,5 +80,8 @@
     "register-form-favious-raps-label": "Favious sites",
     "register-form-input-dob-label": "Date of Birth",
     "#6": "============================ SITES =============================",
-    "sites-title": "CGV CINEMAS"
+    "sites-title": "CGV CINEMAS",
+    "#7": "============================ MOVIES OF SITES =============================",
+    "movies-of-sites-schedule-label": "Schedule",
+    "movies-of-sites-ticket-price-label": "Ticket price"
 }

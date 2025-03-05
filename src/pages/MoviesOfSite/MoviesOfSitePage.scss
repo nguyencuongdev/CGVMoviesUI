@@ -1,0 +1,8 @@
+@use "@/assets/sass/__common.scss" as *;
+
+
+.movie-site-schedule,
+.movies-of-sites-name {
+    @include width-layout-default;
+    margin: 24px auto;
+}
